@@ -14,8 +14,6 @@ promptinit
 prompt adam1
 
 # Use modern completion system
-# autoload -Uz compinit
-# compinit
 autoload -U zmv
 
 zstyle ':completion:*' auto-description 'specify: %d'
