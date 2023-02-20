@@ -21,12 +21,14 @@
     ripgrep
     tldr
     unzip
+
     # Terminal applications
     bat
     btop
     htop
     nvtop
     ranger
+
     # Software
     cargo
     go
@@ -34,8 +36,10 @@
     python3
     python3.pkgs.pip
     zsh
+
     # Fonts
     meslo-lgs-nf
+
     # Rice :>
     neofetch
     pipes-rs
@@ -54,18 +58,19 @@
     initExtraFirst              = "source ~/.config/zsh/zshextra";
 
     shellAliases = {
-      l                         = "exa --icons";
-      ls                        = "exa --git --long";
-      la                        = "exa --git --long --all";
-      lt                        = "exa --git --tree --level=2";
       du                        = "du -h --max-depth=1";
       grep                      = "grep --with-filename --line-number --color=always";
-      he                        = "home-manager edit";
       hb                        = "home-manager build";
-      hs                        = "home-manager switch";
+      he                        = "home-manager edit";
       hg                        = "home-manager generations";
-      ne                        = "sudo vim /etc/nixos/configuration.nix";
-      ns                        = "sudo nixos-rebuild --impure switch";
+      hs                        = "home-manager switch";
+      l                         = "exa -s type --icons";
+      la                        = "exa -s type --git --long --all";
+      ls                        = "exa -s type --git --long";
+      lt                        = "exa -s type --git --tree --level=2";
+      nb                        = "nixos-rebuild build --max-jobs -p main";
+      ne                        = "nvim ~/.config/nixos/configuration.nix";
+      ns                        = "nixos-rebuild switch --max-jobs -p main";
     };
 
     history = {
