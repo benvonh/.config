@@ -13,3 +13,5 @@ menus
 mimeapps.list
 pulse
 Thunar
+zsh/.zshenv
+zsh/.zshrc

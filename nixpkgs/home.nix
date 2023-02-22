@@ -35,7 +35,6 @@
     nodejs
     python3
     python3.pkgs.pip
-    zsh
 
     # Fonts
     meslo-lgs-nf
@@ -68,9 +67,6 @@
       la                        = "exa -s type --git --long --all";
       ls                        = "exa -s type --git --long";
       lt                        = "exa -s type --git --tree --level=2";
-      nb                        = "nixos-rebuild build --max-jobs -p main";
-      ne                        = "nvim ~/.config/nixos/configuration.nix";
-      ns                        = "nixos-rebuild switch --max-jobs -p main";
     };
 
     history = {
@@ -91,7 +87,7 @@
   #############################################################################
   # GTK Settings
   gtk = {
-    enable                      = true;
+    enable                      = false;
 
     cursorTheme = {
       package                   = pkgs.nordzy-cursor-theme;
