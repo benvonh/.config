@@ -16,30 +16,35 @@
     # Command-line tools
     exa
     fd
-    gnumake
     ookla-speedtest
     ripgrep
     tldr
     unzip
 
+    # Software tools
+    cargo
+    cmake
+    gcc
+    gnumake
+    go
+    meson
+    ninja
+    nodejs
+    pkg-config
+    python3
+    python3.pkgs.pip
+
     # Terminal applications
     bat
     btop
     htop
-    nvtop
+    #nvtop
     ranger
-
-    # Software
-    cargo
-    go
-    nodejs
-    python3
-    python3.pkgs.pip
 
     # Fonts
     meslo-lgs-nf
 
-    # Rice :>
+    # Rice :)
     neofetch
     pipes-rs
     tty-clock
@@ -54,7 +59,7 @@
     enableCompletion            = false;
     defaultKeymap               = "emacs";
     dotDir                      = ".config/zsh";
-    initExtraFirst              = "source ~/.config/zsh/zshextra";
+    initExtraFirst              = "source ~/.config/zsh/extra.zsh";
 
     shellAliases = {
       du                        = "du -h --max-depth=1";
@@ -87,24 +92,20 @@
   #############################################################################
   # GTK Settings
   gtk = {
-    enable                      = false;
-
+    enable                      = true;
     cursorTheme = {
       package                   = pkgs.nordzy-cursor-theme;
       name                      = "Nordzy-cursors";
       size                      = 24;
     };
-
     iconTheme = {
       package                   = pkgs.nordzy-icon-theme;
       name                      = "Nordzy";
     };
-
     theme = {
       package                   = pkgs.nordic;
       name                      = "Nordic";
     };
-
     font = {
       package                   = pkgs.fira;
       name                      = "fira";
