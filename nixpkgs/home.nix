@@ -41,9 +41,6 @@
     #nvtop
     ranger
 
-    # Fonts
-    meslo-lgs-nf
-
     # Rice :)
     neofetch
     pipes-rs
@@ -64,14 +61,14 @@
     shellAliases = {
       du                        = "du -h --max-depth=1";
       grep                      = "grep --with-filename --line-number --color=always";
-      hb                        = "home-manager build";
-      he                        = "home-manager edit";
-      hg                        = "home-manager generations";
-      hs                        = "home-manager switch";
+      homebuild                 = "home-manager switch";
+      homeedit                  = "home-manager edit";
       l                         = "exa -s type --icons";
       la                        = "exa -s type --git --long --all";
       ls                        = "exa -s type --git --long";
       lt                        = "exa -s type --git --tree --level=2";
+      nixbuild                  = "sudo nixos-rebuild switch";
+      nixedit                   = "sudo vim /etc/nixos/configuration.nix";
     };
 
     history = {
@@ -96,7 +93,7 @@
     cursorTheme = {
       package                   = pkgs.nordzy-cursor-theme;
       name                      = "Nordzy-cursors";
-      size                      = 24;
+      size                      = 22;
     };
     iconTheme = {
       package                   = pkgs.nordzy-icon-theme;
@@ -108,7 +105,7 @@
     };
     font = {
       package                   = pkgs.fira;
-      name                      = "fira";
+      name                      = "Fira";
       size                      = 10;
     };
   };

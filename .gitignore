@@ -11,6 +11,7 @@ gtk-4.0
 libfm
 menus
 mimeapps.list
+nixos/hardware-configuration.nix
 pulse
 Thunar
 zsh/.zshenv
