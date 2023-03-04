@@ -1,7 +1,9 @@
+# Start Hyprland if login shell
 [[ -o login ]] && exec ~/.config/hypr/hyprland.sh
 
 # Mandatory flex
 #neofetch
+pfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -47,3 +49,15 @@ zstyle ':autocomplete:*' widget-style menu-select
 source ~/.config/zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
+# Custom functions
+nixos() {
+    case "$1" in
+        'build' | 'b' )
+            sudo nixos-rebuild switch
+            ;;
+        'edit' | 'e' )
+            sudo vim /etc/nixos/configuration.nix
+            ;;
+    esac
+}

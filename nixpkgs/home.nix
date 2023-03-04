@@ -43,6 +43,7 @@
 
     # Rice :)
     neofetch
+    pfetch
     pipes-rs
     tty-clock
   ];
@@ -61,14 +62,11 @@
     shellAliases = {
       du                        = "du -h --max-depth=1";
       grep                      = "grep --with-filename --line-number --color=always";
-      homebuild                 = "home-manager switch";
-      homeedit                  = "home-manager edit";
+      home                      = "home-manager";
       l                         = "exa -s type --icons";
       la                        = "exa -s type --git --long --all";
       ls                        = "exa -s type --git --long";
       lt                        = "exa -s type --git --tree --level=2";
-      nixbuild                  = "sudo nixos-rebuild switch";
-      nixedit                   = "sudo vim /etc/nixos/configuration.nix";
     };
 
     history = {
