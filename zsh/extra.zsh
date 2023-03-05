@@ -1,5 +1,5 @@
 # Start Hyprland if login shell
-[[ -o login ]] && exec ~/.config/hypr/hyprland.sh
+[[ -o login ]] && exec ~/.config/hypr/hyprland.bash
 
 # Mandatory flex
 #neofetch
