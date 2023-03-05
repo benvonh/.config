@@ -1,50 +1,48 @@
-window {
+@import ".config/wofi/nord.css";
+
+#window {
+    background-color: @dark0;
+    border: 2px solid @frost0;
+    border-radius: 16px;
     margin: 0px;
-    background-color: #282a36;
-    border-radius: 30px;
-    border: 2px solid #bd93f9;
 }
 
 #input {
-    margin: 5px;
+    background-color: @dark3;
     border: none;
-    color: #FFFFFF;
-    background-color: #44475a;
-    border-radius: 30px;
+    border-radius: 16px;
+    color: @light2;
+    margin: 8px;
 }
 
 #inner-box {
-    margin: 5px;
+    background-color: @dark0;
     border: none;
-    background-color: #282a36;
-    border-radius: 30px;
+    border-radius: 16px;
+    margin: 8px;
 }
 
 #outer-box {
-    margin: 15px;
+    background-color: @dark0;
     border: none;
-    background-color: #282a36;
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
+    margin: 8px;
 }
 
 #text {
-    margin: 5px;
     border: none;
-    color: #bd93f9;
+    color: @light2;
+    margin: 8px;
 } 
 
 #entry:selected {
-    background-color: #44475a;
-    border-radius: 20px;
+    background-color: @dark3;
+    border-radius: 16px;
+    margin: 4px;
     outline: none;
 }
 
 #entry:selected * {
-    background-color: #44475a;
-    border-radius: 20px;
+    background-color: @dark3;
+    border-radius: 16px;
     outline: none;
 }

@@ -14,6 +14,7 @@
 
   home.packages = with pkgs; [
     # Command-line tools
+    bat
     exa
     fd
     ookla-speedtest
@@ -21,7 +22,7 @@
     tldr
     unzip
 
-    # Software tools
+    # Build tools
     cargo
     cmake
     gcc
@@ -35,13 +36,13 @@
     python3.pkgs.pip
 
     # Terminal applications
-    bat
     btop
     htop
     #nvtop
     ranger
 
     # Rice :)
+    cava
     neofetch
     pfetch
     pipes-rs
@@ -61,7 +62,6 @@
 
     shellAliases = {
       du                        = "du -h --max-depth=1";
-      grep                      = "grep --with-filename --line-number --color=always";
       home                      = "home-manager";
       l                         = "exa -s type --icons";
       la                        = "exa -s type --git --long --all";
