@@ -1,0 +1,27 @@
+sort=-time
+layer=overlay
+background-color=#2E3440
+width=300
+height=110
+border-size=2
+border-color=#8FBCBB
+border-radius=16
+icons=1
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+font=FiraCode monospace 14
+
+[urgency=low]
+border-color=#EBCB8B
+
+[urgency=normal]
+border-color=#D08770
+
+[urgency=high]
+border-color=#BF616A
+default-timeout=0
+
+[category=mpd]
+default-timeout=2000
+group-by=category
