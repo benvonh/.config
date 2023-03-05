@@ -53,7 +53,7 @@ source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # Custom functions
 nixos() {
     case "$1" in
-        'build' | 'b' )
+        'switch' | 's' )
             sudo nixos-rebuild switch
             ;;
         'edit' | 'e' )
