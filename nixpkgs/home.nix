@@ -86,23 +86,23 @@
 
   #############################################################################
   # GTK Settings
-  gtk = {
+  gtk = with pkgs; {
     enable                      = true;
     cursorTheme = {
-      package                   = pkgs.nordzy-cursor-theme;
+      package                   = nordzy-cursor-theme;
       name                      = "Nordzy-cursors";
-      size                      = 22;
+      size                      = 24;
     };
     iconTheme = {
-      package                   = pkgs.nordzy-icon-theme;
+      package                   = nordzy-icon-theme;
       name                      = "Nordzy";
     };
     theme = {
-      package                   = pkgs.nordic;
+      package                   = nordic;
       name                      = "Nordic";
     };
     font = {
-      package                   = pkgs.fira;
+      package                   = fira;
       name                      = "Fira";
       size                      = 10;
     };

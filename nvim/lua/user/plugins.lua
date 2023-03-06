@@ -58,6 +58,12 @@ return packer.startup(function(use)
         run = '<cmd>TSUpdate<cr>'
     }
 
+    -- markdown preview
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end
+    }
+
     -- file explorer
     use {
         'nvim-tree/nvim-tree.lua',

@@ -12,6 +12,7 @@ libfm
 menus
 mimeapps.list
 nixos/hardware-configuration.nix
+nvim/plugin/packer_compiled.lua
 pulse
 Thunar
 zsh/.zshenv
