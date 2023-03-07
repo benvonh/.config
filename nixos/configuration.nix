@@ -7,13 +7,15 @@
     ./hardware-configuration.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_1;
+
   boot.loader.systemd-boot.enable = true;
-  boot.loader.systemd-boot.configurationLimit = 3;
+  boot.loader.systemd-boot.configurationLimit = 2;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "zeph"; # Define your hostname.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.hostName = "zeph";
+  networking.networkmanager.enable = true;
 
   time.timeZone = "Australia/Brisbane";
 
@@ -24,15 +26,15 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
-  # Enable the X11 windowing system.
   # services.xserver.enable = true;
   # services.xserver.layout = "us";
   # services.xserver.libinput.enable = true;
-
-  programs.dconf.enable = true;
-  nixpkgs.config.allowUnfree = false;
-  
+  # services.openssh.enable = true;
   services.printing.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
+  programs.dconf.enable = true;
+  security.pam.services.swaylock = {};
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;
@@ -44,19 +46,34 @@
     packages = with pkgs; [
       brave
       kitty
-      mako
       pcmanfm
       virt-manager
+      vscode
       waybar
       wofi
     ];
   };
 
   environment.systemPackages = with pkgs; [
+    brightnessctl
+    libnotify
+    mako
+    pamixer
+    pciutils
+    swayidle
+    swaylock-effects
     vim
     wget
+    wlr-randr
   ];
 
-  # services.openssh.enable = true;
+  fonts.fonts = with pkgs; [
+    meslo-lgs-nf
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+  ];
+
   system.stateVersion = "22.11";
 }

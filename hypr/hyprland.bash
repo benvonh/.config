@@ -2,6 +2,7 @@
 
 cd ~
 
+export TERM=kitty
 export EDITOR=nvim
 export XDG_DATA_DIRS=$XDG_DATA_DIRS:~/.nix-profile/share
 

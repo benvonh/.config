@@ -53,11 +53,14 @@ source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # Custom functions
 nixos() {
     case "$1" in
+        'edit' | 'e' )
+            sudo vim /etc/nixos/configuration.nix
+            ;;
         'switch' | 's' )
             sudo nixos-rebuild switch
             ;;
-        'edit' | 'e' )
-            sudo vim /etc/nixos/configuration.nix
+        'clean' | 'c' )
+            sudo nix-collect-garbage
             ;;
     esac
 }
