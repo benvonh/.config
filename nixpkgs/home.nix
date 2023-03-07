@@ -15,6 +15,7 @@
     bat
     exa
     fd
+    gh
     ookla-speedtest
     ripgrep
     tldr
@@ -36,6 +37,7 @@
     # Terminal applications
     btop
     htop
+    neovim
     #nvtop
     ranger
 
@@ -77,10 +79,6 @@
     userName                    = "benvonh";
     userEmail                   = "benjaminvonsnarski@gmail.com";
   };
-
-  programs.gh.enable            = true;
-
-  programs.neovim.enable        = true;
 
   #############################################################################
   # GTK Settings
