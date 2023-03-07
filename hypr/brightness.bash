@@ -10,7 +10,7 @@ notify-screen() {
     local val=$(brightnessctl -m | awk -F, '{print substr($4, 0, length($4)-1)}')
     local urg=low
 
-    if (($val > 75)) then
+    if (($val == 100)) || (($val == 0)) then
         local urg=normal
     fi
 
@@ -21,7 +21,7 @@ notify-keyboard() {
     local val=$(brightnessctl -m -d 'asus::kbd_backlight' | awk -F, '{print substr($4, 0, length($4)-1)}')
     local urg=low
 
-    if (($val > 75)) then
+    if (($val == 100)) || (($val == 0)) then
         local urg=normal
     fi
 

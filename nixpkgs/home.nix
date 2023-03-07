@@ -8,10 +8,8 @@
   #############################################################################
   # Home
   home.stateVersion             = "22.11";
-
   home.username                 = "ben";
   home.homeDirectory            = "/home/ben";
-
   home.packages = with pkgs; [
     # Command-line tools
     bat
@@ -89,13 +87,17 @@
   gtk = with pkgs; {
     enable                      = true;
     cursorTheme = {
-      package                   = nordzy-cursor-theme;
-      name                      = "Nordzy-cursors";
+      #package                   = nordzy-cursor-theme;
+      #name                      = "Nordzy-cursors";
+      package                   = numix-cursor-theme;
+      name                      = "Numix-Cursor-Light";
       size                      = 24;
     };
     iconTheme = {
-      package                   = nordzy-icon-theme;
-      name                      = "Nordzy";
+      #package                   = nordzy-icon-theme;
+      #name                      = "Nordzy";
+      package                   = numix-icon-theme-circle;
+      name                      = "Numix-Circle";
     };
     theme = {
       package                   = nordic;

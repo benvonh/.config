@@ -64,3 +64,14 @@ nixos() {
             ;;
     esac
 }
+
+edit() {
+    if [[ -e ~/.config/$1 ]];
+    then
+        cd ~/.config/$1
+        nvim
+        cd -
+    else
+        ls ~/.config
+    fi
+}
