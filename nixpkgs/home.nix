@@ -18,6 +18,7 @@
     gh
     ookla-speedtest
     ripgrep
+    taskwarrior
     tldr
     unzip
 

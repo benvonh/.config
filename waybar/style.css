@@ -3,7 +3,7 @@
 /* Global */
 * {
     border: none;
-    font-family: Fira;
+    font-family: FiraCode;
     font-size: 14px;
     font-weight: bold;
     min-height: 0;
@@ -34,25 +34,25 @@ tooltip label {
 #clock {
     background: @dark0;
     color: @frost0;
-    margin: 16px 0px 0px 0px;
-    padding: 8px 16px 8px 16px;
+    margin: 8px 0px 0px 0px;
+    padding: 4px 8px 4px 8px;
 }
 
 /* Curved left corners */
 #cpu, #tray, #battery {
-    border-radius: 16px 0px 0px 16px;
-    margin-left: 16px;
+    border-radius: 8px 0px 0px 8px;
+    margin-left: 8px;
 }
 
 /* Curved middle */
 #window {
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 8px 8px 8px 8px;
 }
 
 /* Curved right corners */
 #network, #clock {
-    border-radius: 0px 16px 16px 0px;
-    margin-right: 16px;
+    border-radius: 0px 8px 8px 0px;
+    margin-right: 8px;
 }
 
 /* Network colours */
