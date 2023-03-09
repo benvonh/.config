@@ -3,13 +3,13 @@
 {
   #############################################################################
   # Nixpkgs
-  nixpkgs.config.allowUnfree    = true;
+  nixpkgs.config.allowUnfree = true;
 
   #############################################################################
   # Home
-  home.stateVersion             = "22.11";
-  home.username                 = "ben";
-  home.homeDirectory            = "/home/ben";
+  home.stateVersion = "22.11";
+  home.username = "ben";
+  home.homeDirectory = "/home/ben";
   home.packages = with pkgs; [
     # Command-line tools
     bat
@@ -39,7 +39,7 @@
     btop
     htop
     neovim
-    #nvtop
+    nvtop
     ranger
 
     # Rice :)
@@ -52,7 +52,21 @@
 
   #############################################################################
   # Programs
-  programs.home-manager.enable  = true;
+  programs.home-manager.enable = true;
+
+  programs.git = {
+    enable = true;
+    userName = "benvonh";
+    userEmail = "benjaminvonsnarski@gmail.com";
+  };
+
+  programs.helix = {
+    enable = true;
+    settings = {
+      theme = "nord";
+      editor.scrolloff = 8;
+    };
+  };
 
   programs.zsh = {
     enable                      = true;
@@ -73,12 +87,6 @@
     history = {
       share                     = false;
     };
-  };
-
-  programs.git = {
-    enable                      = true;
-    userName                    = "benvonh";
-    userEmail                   = "benjaminvonsnarski@gmail.com";
   };
 
   #############################################################################
@@ -103,8 +111,8 @@
       name                      = "Nordic";
     };
     font = {
-      package                   = fira;
-      name                      = "Fira";
+      #package                   = fira;
+      name                      = "FiraCode Nerd Font";
       size                      = 10;
     };
   };

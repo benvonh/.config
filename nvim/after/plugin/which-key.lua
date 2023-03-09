@@ -2,7 +2,8 @@ local ok, wk = pcall(require, 'which-key')
 
 if not ok then
     print('Failed to find which-key')
-    return end
+    return
+end
 
 vim.g.mapleader = ' '
 -- basic commands
@@ -48,11 +49,10 @@ wk.register({
                 { prompt = 'Search file location: ' },
                 function(input)
                     if input == nil then
-                        print('Cancelling search...')
-                    else
-                        print('Searching in ' .. input)
-                        vim.cmd('Telescope find_files cwd=' .. input)
+                        input = '.'
                     end
+                    print('Searching in ' .. input)
+                    vim.cmd('Telescope find_files cwd=' .. input)
                 end
             )
         end,

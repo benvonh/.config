@@ -3,7 +3,7 @@
 /* Global */
 * {
     border: none;
-    font-family: FiraCode;
+    font-family: FiraCode Nerd Font;
     font-size: 14px;
     font-weight: bold;
     min-height: 0;
@@ -14,7 +14,7 @@ window#waybar {
     background: rgba(46, 52, 64, 0);
 }
 
-/* Tool tip */
+/* Tooltip */
 tooltip {
     background: @dark0;
 }
@@ -27,6 +27,7 @@ tooltip label {
 #memory,
 #disk,
 #network,
+#workspaces,
 #window,
 #tray,
 #battery,
@@ -45,7 +46,7 @@ tooltip label {
 }
 
 /* Curved middle */
-#window {
+#workspaces, #window {
     border-radius: 8px 8px 8px 8px;
 }
 
@@ -59,6 +60,20 @@ tooltip label {
 #network.disabled,
 #network.disconnected {
     color: @red;
+}
+
+/* Workspaces */
+#workspaces button {
+    color: @dark3;
+}
+#workspaces button.active {
+    color: @frost0;
+}
+#workspaces button.urgent {
+    color: @red;
+}
+#workspaces button:hover {
+    color: @frost3;
 }
 
 /* Battery colours */
