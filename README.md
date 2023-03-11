@@ -2,4 +2,4 @@
 
 My Linux dotfiles.
 
-Clone into home directory
+**DEPRECATED**: Used as backup configuration. See [snow](https://github.com/benvonh/snow) for main configuration.
